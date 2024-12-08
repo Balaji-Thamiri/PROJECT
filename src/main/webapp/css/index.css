@@ -1,0 +1,182 @@
+:root {
+    /* Color Palette with HSL for more dynamic color manipulation */
+    --primary-hue: 220;
+    --primary-color: hsl(var(--primary-hue), 80%, 50%);
+    --secondary-color: hsl(var(--primary-hue), 70%, 60%);
+    --accent-color: hsl(340, 90%, 55%);
+    --text-primary: hsl(0, 0%, 15%);
+    --text-secondary: hsl(0, 0%, 45%);
+    
+    /* Sophisticated Spacing System */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* Advanced Typography Scale */
+    --font-scale: 1.25;
+    --base-font-size: 16px;
+    --h1-size: calc(var(--base-font-size) * var(--font-scale) * 2.5);
+    --h2-size: calc(var(--base-font-size) * var(--font-scale) * 2);
+    --h3-size: calc(var(--base-font-size) * var(--font-scale) * 1.5);
+
+    /* Advanced Transition Tokens */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-medium: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    
+    
+}
+
+/* Fluid Typography with Clamp */
+body {
+    font-size: clamp(14px, 1vw + 1rem, 18px);
+    line-height: 1.6;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.025em;
+}
+
+/* Advanced Responsive Grid Layout */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* Sophisticated Hover Effects with Pseudo-Elements */
+.hover-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-medium);
+}
+
+.hover-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg, 
+        hsla(var(--primary-hue), 80%, 50%, 0.1), 
+        hsla(var(--primary-hue), 80%, 50%, 0.3)
+    );
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.hover-card:hover {
+    transform: scale(1.02);
+}
+
+.hover-card:hover::before {
+    opacity: 1;
+}
+
+/* Advanced Input Styling */
+.advanced-input {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid hsla(var(--primary-hue), 50%, 50%, 0.3);
+    border-radius: 0.5rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: 
+        border-color var(--transition-fast), 
+        box-shadow var(--transition-fast);
+}
+
+.advanced-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 
+        0 0 0 3px hsla(var(--primary-hue), 80%, 50%, 0.2),
+        inset 0 1px 3px hsla(0, 0%, 0%, 0.1);
+}
+
+/* Sophisticated Animation Keyframes */
+@keyframes subtle-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.floating-element {
+    animation: 
+        subtle-float 3s ease-in-out infinite,
+        fadeIn 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Dark Mode Support with Elegant Transition */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: hsl(var(--primary-hue), 70%, 60%);
+        --text-primary: hsl(0, 0%, 90%);
+        --text-secondary: hsl(0, 0%, 70%);
+        background-color: hsl(220, 15%, 15%);
+        color: var(--text-primary);
+    }
+}
+
+/* Accessibility Focused Active States */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+   @keyframes fadeIn {
+      0% {
+          opacity: 0;
+          transform: translateY(10px);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  .fade-in {
+      display: inline-block;
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
+  }
+  .top-colleges-section {
+  background: linear-gradient(to bottom right, #f0f8ff, #f0f4ff);
+  padding: 4rem 0;
+}
+
+.top-colleges-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 3rem;
+}
+
+.college-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.college-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.college-card img {
+  height: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.college-card h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.college-card p {
+  font-size: 0.9375rem;
+  color: #475569;
+}

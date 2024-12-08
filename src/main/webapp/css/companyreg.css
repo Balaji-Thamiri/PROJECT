@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align to the left */
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%);
+  background-image: url('/images/bgt.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.registration-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  margin-left: 2rem; /* Adjust this value to move the form more left */
+}
+
+    .login-logo {
+      max-width: 100px;
+      margin-bottom: 1.5rem;
+    }
+    .btn-register {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+    }
+    .btn-register:hover {
+      background: linear-gradient(135deg, #5a6fd6 0%, #6a438f 100%);
+    }
+    .form-label {
+      font-weight: 500;
+    }
+    .upload-image {
+      width: 150px;
+      height: 150px;
+      border: 2px dashed #ced4da;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+    }
+    .upload-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .upload-image i {
+      font-size: 3rem;
+      color: #6c757d;
+      z-index: 1;
+    }
+    .password-mismatch {
+      color: #dc3545;
+      font-size: 0.875em;
+      margin-top: 0.25rem;
+    }
+/*      .toast-success { */
+/*             background: linear-gradient(to right, #00b09b, #96c93d); */
+/*         } */
+/*         .toast-error { */
+/*             background: linear-gradient(to right, #ff5f6d, #ffc371); */
+/*         } */
+      .toastify {
+            font-family: 'Poppins', sans-serif;
+            padding: 12px 20px;
+            color: #ffffff;
+            border-radius: 5px;
+            font-size: 1rem;
+            overflow: hidden;
+        }
+        .toastify.success {
+            background: linear-gradient(to right, #00b09b, #96c93d);
+        }
+        .toastify.error {
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+        }
+        .toast-timer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            animation: toast-timer 5s linear forwards;
+        }
+        @keyframes toast-timer {
+            0% {
+                width: 100%;
+            }
+            100% {
+                width: 0%;
+            }
+        }
+        
+        /* Styles for "Don't have an account? Sign up" */
+.login-link {
+    font-size: 1.3rem;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #495057;
+    text-decoration: underline;
+}
+
+.position-relative {
+    position: relative;
+  }
+
+  .password-toggle {
+    position: absolute;
+    top: 70%; /* Adjust this value to move the icon down */
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+
+  .password-toggle:hover {
+    color: #000;
+  }

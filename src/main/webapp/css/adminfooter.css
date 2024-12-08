@@ -1,0 +1,97 @@
+.footer {
+    background-color: #1e1e2f;
+    color: #ffffff;
+    padding:  0;
+    text-align: center;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    border-top: 2px solid #444;
+}
+
+/* Footer Content */
+.footer p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #cccccc;
+}
+
+/* Social Icons Container */
+.social-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Social Icon Links */
+.social-icons a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Icon Styling */
+.social-icons .fab {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background-color: #333333;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+/* Hover Effects */
+.social-icons a:hover .fab {
+    background-color: #555555;
+    transform: scale(1.1);
+    border-color: #999;
+}
+
+/* Footer Layout Container */
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .footer {
+        padding: 2rem 1rem;
+    }
+    
+    .social-icons {
+        gap: 1rem;
+    }
+    
+    .social-icons .fab {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    
+    .footer p {
+        font-size: 0.85rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer p, .social-icons {
+    animation: fadeInUp 0.8s ease-out forwards;
+}

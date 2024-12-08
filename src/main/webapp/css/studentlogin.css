@@ -1,0 +1,174 @@
+body {
+      margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%);
+    background-image: url('/images/stm.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+    .login-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 1rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+    .login-logo {
+      max-width: 100px;
+      margin-bottom: 1.5rem;
+    }
+    .btn-login {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+    }
+    .btn-login:hover {
+      background: linear-gradient(135deg, #5a6fd6 0%, #6a438f 100%);
+    }
+    .social-login .btn {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      margin: 0 0.25rem;
+    }
+    .or-divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #6c757d;
+    }
+    .or-divider::before,
+    .or-divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #ced4da;
+    }
+    .or-divider::before {
+      margin-right: .5em;
+    }
+    .or-divider::after {
+      margin-left: .5em;
+    }
+     .toastify {
+            font-family: 'Poppins', sans-serif;
+            padding: 12px 20px;
+            color: #ffffff;
+            border-radius: 5px;
+            font-size: 1rem;
+            overflow: hidden;
+        }
+        .toastify.success {
+            background: linear-gradient(to right, #00b09b, #96c93d);
+        }
+        .toastify.successful {
+            background: linear-gradient(to right, #00b09b, #96c93d);
+        }
+        .toastify.error {
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+        }
+         .toastify.status {
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+        }
+         .spinner {
+      display: none;
+      width: 24px;
+      height: 24px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .loading-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loading-overlay.show {
+      display: flex;
+    }
+
+    .loading-message {
+      color: white;
+      font-size: 1.2rem;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .dot-animation::after {
+      content: '...';
+      animation: dots 2s steps(4, end) infinite;
+      display: inline-block;
+      width: 20px;
+      text-align: left;
+    }
+
+    @keyframes dots {
+      0%, 20% { content: ''; }
+      40% { content: '.'; }
+      60% { content: '..'; }
+      80% { content: '...'; }
+      100% { content: ''; }
+    }
+
+    /* Progress bar styles */
+    .progress-bar {
+      width: 200px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 2px;
+      margin-top: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: #ffffff;
+      border-radius: 2px;
+      transition: width 0.2s ease-in-out;
+    }
+    
+    
+    .social-login a:hover {
+        transform: scale(1.1);
+    }
+    
+    /* Styles for "Don't have an account? Sign up" */
+.forgot-password {
+    font-size: 1.0rem;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+/* Styles for "Don't have an account? Sign up" */
+.signup-link {
+    font-size: 1.0rem;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+    color: #495057;
+    text-decoration: underline;
+}
