@@ -43,7 +43,7 @@ Placex is a comprehensive Placement Interaction System designed to streamline th
 
 1. **Clone the Repository:**
    ```sh
-   git clone https://github.com/klu-2200030106/PIS.git
+   git clone https://github.com/Balaji-Thamiri/PIS.git
    cd pis
    ```
 2. **Configure Database:**
@@ -85,6 +85,13 @@ Placex is a comprehensive Placement Interaction System designed to streamline th
 ## Contributing
 
 Contributions are welcome! Feel free to submit issues and pull requests.
+
+## Team Members
+
+- **Maruthi Sai Dinesh Balaji** – *Team Lead; established connection between frontend and backend*
+- **Charan Sai** – *Handled frontend with a focus on UI/UX*
+- **Rohith Kumar** – *Managed database operations and query optimization (reducing response time, clustering)*
+
 
 ## License
 
